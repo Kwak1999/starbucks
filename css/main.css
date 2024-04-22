@@ -14,10 +14,16 @@ img{
     display: block; /* 이미지를 글자가 아닌 블록으로 처리하겠다 */
 }
 
+a {
+    /* a태그에 밑줄 제거 */
+    text-decoration: none;
+}
+
 /* HEADER */
 header{
     /*헤더의 배경은 파랑*/
-    background-color: royalblue;
+    background-color: #f6f5f0;
+    border-bottom: 1px solid #c8c8c8;
 }
 
 header .inner{
@@ -28,7 +34,7 @@ header .inner{
     /* 이너 클래스의 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
     margin: 0 auto;
     /* 배경색 */
-    background-color: orange;
+    /*background-color: orange;*/
     /* 위치를 상대적으로 설정 */
     position: relative;
 }
@@ -46,5 +52,98 @@ header .logo{
     left: 0;
     /* 자동 마진을 설정하여 수평 가운데 정렬 */
     margin: auto;
+    /* 로고를 보이지 않도록 : display: none; */
+    /*display: none;*/
 
+}
+
+header .sub-menu {
+    position: absolute;
+    top:10px;
+    right: 0;
+    display: flex;
+}
+
+header .sub-menu ul.menu {
+    /* Arial 폰트가 있으면 적용 없으면 고딕체 계열에서 선택 적용*/
+    font-family: Arial, sans-serif;
+    /* 메뉴목록 수평 정렬 */
+    display: flex;
+}
+
+header .sub-menu ul.menu li{
+    position: relative;
+}
+/* 가상 요소 선택자 */
+header .sub-menu ul.menu li::before{
+/*    가상의 요소 만듬 선택메뉴 사이의 구분 선 */
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*가상 클래스 선택자 추가*/
+/* 여러 li 태그들 중에 첫번째 li태그의 가상 요소
+선택자 before 부분을 어떻게 처리 할지 */
+header .sub-menu ul.menu li:first-child::before{
+    /* signin 왼쪽에 구분선이 안보이도록 만들기 */
+    display: none;
+}
+
+header .sub-menu ul.menu li a{
+    font-size: 12px;
+    padding: 11px 16px;
+    /* a태그르 블록으로 인식 */
+    display: block;
+    color: #656565;
+}
+/* a태그에 마우스를 올릴시 어떻게 처리하겠다. */
+header .sub-menu ul.menu li a:hover{
+    color: #000;
+}
+
+header .sub-menu .search {
+    /* 범위 확인 */
+    /*background-color: red;*/
+    height: 34px;
+    position: relative;
+}
+
+header .sub-menu .search input{
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+    transition: width .4s;
+}
+
+header .sub-menu .search input:focus{
+    width: 190px;
+    border-color: #669900;
+}
+
+header .sub-menu .search .material-icons{
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    transition: .4s;
+}
+
+header .sub-menu .search.focused .material-icons{
+    opacity: 0;
 }
