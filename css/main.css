@@ -8,6 +8,7 @@ body{
     /*줄의 간격*/
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
+    height: 3000px;
 }
 
 img{
@@ -18,25 +19,39 @@ a {
     /* a태그에 밑줄 제거 */
     text-decoration: none;
 }
-
+.inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+/* 포지션 값이 fixed와 absolute로 부여되어 있는 요소는
+가로 너비가 최소한으로 줄어들려고 시도를 하더라 */
 /* HEADER */
 header{
+    width: 100%;
+    /*position: relative;*/
     /*헤더의 배경은 파랑*/
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
+    position: fixed;
+    top: 0;
 }
 
-header .inner{
+header > .inner{
     /*헤더의 이너클래스 부분 굵기 1100px*/
-    width: 1100px;
+    /*width: 1100px;*/
+
     /* 높이 */
     height: 120px;
+
     /* 이너 클래스의 가운데 정렬을 위해 좌우 마진을 자동으로 설정 */
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+
     /* 배경색 */
     /*background-color: orange;*/
+
     /* 위치를 상대적으로 설정 */
-    position: relative;
+    /*position: relative;*/
 }
 
 header .logo{
@@ -115,35 +130,135 @@ header .sub-menu .search {
     position: relative;
 }
 
-header .sub-menu .search input{
-    width: 36px;
-    height: 34px;
-    padding: 4px 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-    outline: none;
-    background-color: #fff;
-    color: #777;
-    font-size: 12px;
-    transition: width .4s;
+/* 헤더의 서브 메뉴 내 검색 요소에 대한 CSS 스타일 */
+
+/* 검색 입력 필드의 기본 스타일 */
+header .sub-menu .search input {
+    width: 36px; /* 입력 필드의 초기 너비 */
+    height: 34px; /* 입력 필드의 높이 */
+    padding: 4px 10px; /* 입력 필드 내부의 여백 */
+    border: 1px solid #ccc; /* 테두리 스타일 */
+    box-sizing: border-box; /* 패딩과 테두리를 너비에 포함하기 위한 상자 크기 설정 */
+    border-radius: 5px; /* 둥근 모서리를 위한 테두리 반지름 */
+    outline: none; /* 포커스 시 아웃라인 제거 */
+    background-color: #fff; /* 입력 필드의 배경색 */
+    color: #777; /* 텍스트 색상 */
+    font-size: 12px; /* 글꼴 크기 */
+    transition: width .4s; /* 너비 변경을 위한 전환 효과 */
 }
 
-header .sub-menu .search input:focus{
-    width: 190px;
-    border-color: #669900;
+/* 입력 필드가 포커스된 상태일 때의 스타일 */
+header .sub-menu .search input:focus {
+    width: 190px; /* 포커스 시 입력 필드의 확장된 너비 */
+    border-color: #669900; /* 포커스 시 테두리 색상 */
 }
 
-header .sub-menu .search .material-icons{
-    height: 24px;
-    position: absolute;
-    top: 0;
+/* 검색 요소 내의 자료 아이콘에 대한 스타일 */
+header .sub-menu .search .material-icons {
+    height: 24px; /* 자료 아이콘의 높이 */
+    position: absolute; /* 위치 지정 */
+    top: 0; /* 아이콘을 수직으로 정렬 */
     bottom: 0;
-    right: 5px;
-    margin: auto;
-    transition: .4s;
+    right: 5px; /* 오른쪽에 약간의 여백을 두고 아이콘을 정렬 */
+    margin: auto; /* 아이콘을 수직으로 가운데 정렬 */
+    transition: .4s; /* 투명도 변경을 위한 전환 효과 */
 }
 
-header .sub-menu .search.focused .material-icons{
-    opacity: 0;
+/* 검색 필드가 포커스된 상태일 때 자료 아이콘에 대한 스타일 */
+header .sub-menu .search.focused .material-icons {
+    opacity: 0; /* 검색 필드가 포커스된 경우 아이콘 숨김 */
+}
+
+header .main-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    display: flex; /* 메인 메뉴 수평으로 맞추기 */
+}
+
+header .main-menu .item {
+
+}
+
+header .main-menu .item .item__name {
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+header .main-menu .item:hover .item__name {
+    background-color: #2c2a29;
+    color: #669900;
+    border-radius: 6px 6px 0 0;
+}
+
+header .main-menu .item .item__contents {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+
+header .main-menu .item:hover .item__contents {
+    display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+    background-color: #2c2a29;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul {
+    display: flex;
+    padding: 20px 0;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul  > li{
+    width: 220px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul  > li h4{
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul  > li ul li{
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul  > li ul li:hover{
+    color: #669900;
+}
+
+header .main-menu .item .item__contents .contents__texture {
+    padding: 26px 0;
+    font-size: 12px;
+    background-image: url("../images/main_menu_pattern.jpg");
+}
+
+header .main-menu .item .item__contents .contents__texture h4{
+    color: #999999;
+    font-weight: 700;
+}
+header .main-menu .item .item__contents .contents__texture p{
+    color: #669900;
+    margin: 4px 0 14px;
+}
+
+header .badges {
+    position: absolute;
+    top: 132px;
+    right: 12px;
+}
+
+header .badges .badge {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+    cursor: pointer;
 }
