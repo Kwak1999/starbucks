@@ -22,19 +22,23 @@
     <meta property="twitter:url" content="https://starbucks.co.kr" />
 
     <link rel="icon" href="./favicon.png"/> <!--favicon.ico 파일 이외에 다른 파일을 사용하도록 설정 -->
-    <link href="
-        https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
-          rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="./css/main.css"/>
+    <!-- in HEAD -->
+
+<!--    SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 
     <!-- 자바스크립트 라이브러리 -->
 <!--    애니메시션-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!--    함수 딜레이 넣기-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <!--    html 구조가 모두 해석이 되면 js가 동작되도록 defer-->
     <script defer src="./js/main.js"></script>
 </head>
@@ -410,7 +414,22 @@
             <div class="inner">
                 <div class="inner__left">
                     <h2>공지사항</h2>
-                    <div class="swiper-container"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">크리스마스</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">크리스마스2</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">크리스마스3</a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:void(0)">크리스마스4</a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="javascript:void(0)" class="notice-line__more">
                         <div class="material-icons">add_circle</div>
                     </a>
