@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{gsap, lodash.js, reset-css, swiper}" />
+    <file url="file://$PROJECT_DIR$" libraries="{ScrollMagic, gsap, lodash.js, swiper, swiper-bundle}" />
   </component>
 </project>
