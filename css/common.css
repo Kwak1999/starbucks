@@ -9,7 +9,7 @@ body{
     /*줄의 간격*/
     line-height: 1.4;
     font-family: 'Nanum Gothic', sans-serif;
-    height: 3000px;
+    /*height: 3000px;*/
 }
 
 img{
