@@ -6,8 +6,7 @@
 
 [main 브랜치](https://github.com/Kwak1999/starbucks.git) <br/>
 
-[DEMO](https://flamboyant-lumiere-482a1e.netlify.app/) <br/>
-[DEMO+signin](https://priceless-bhabha-83fc0d.netlify.app/)
+[DEMO+signin](https://scintillating-quokka-c7d12b.netlify.app)
 
 ![Starbucks](https://raw.githubusercontent.com/ParkYoungWoong/starbucks-vanilla-app/master/_assets/main_screenshot.jpg)
 
