@@ -1,4 +1,4 @@
-![image](https://github.com/Kwak1999/starbucks/assets/126591154/33010745-9d1d-41f6-a7f4-3165dda511c5)[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://scintillating-quokka-c7d12b.netlify.app)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9f2f756f-e1fc-48d9-9c07-b7d7433d8aaa/deploy-status)](https://scintillating-quokka-c7d12b.netlify.app)
 # ☕ STARBUCKS
 
 스타벅스 랜딩 페이지(홈페이지)를 만드는 예제입니다. <br>
@@ -8,7 +8,7 @@
 
 [DEMO+signin](https://scintillating-quokka-c7d12b.netlify.app)
 
-![Starbucks](https://www.notion.so/789f871035bb4c5bb1243e93b7aaa85b?pvs=4#a1a695bf872640e9be5f46996b562eeb)
+![Starbucks](https://github.com/Kwak1999/starbucks/assets/126591154/33010745-9d1d-41f6-a7f4-3165dda511c5)
 
 ## 문자 인코딩(Character Encoding) 설정
 
